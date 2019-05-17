@@ -3,9 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-    entry: './src/js/index.js',
+    entry: './src/main-page/app.js',
     output: {
-        filename: 'bundle.js',
+        filename: 'app.bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
     devServer: {
@@ -16,9 +16,9 @@ module.exports = {
             {
                 test: /\.(s?css)$/i,
                 use: [
-                    "style-loader", // creates style nodes from JS strings
-                    "css-loader", // translates CSS into CommonJS
-                    "sass-loader" // compiles Sass to CSS, using Node Sass by default
+                    "style-loader",
+                    "css-loader",
+                    "sass-loader"
                 ]
             },
             {
@@ -32,7 +32,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: "./index.html",
-            title: "Title Done Right"
+            title: "My Awesome App"
         }),
         new CleanWebpackPlugin(),
     ],
