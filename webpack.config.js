@@ -3,9 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-    entry: './src/main-page/app.js',
+    entry: {
+        main: path.resolve(__dirname, './src/main-page/main.js'),
+    },
     output: {
-        filename: 'app.bundle.js',
+        filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
     devServer: {
@@ -31,8 +33,11 @@ module.exports = {
     devtool: "source-map",
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./index.html",
-            title: "My Awesome App"
+            template: "./src/main-page/main.html",
+            title: "My Awesome App",
+            filename: "index.html",
+            chunks: ["main"],
+            hash: true,
         }),
         new CleanWebpackPlugin(),
     ],
