@@ -5,7 +5,6 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
   <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
@@ -21,8 +20,13 @@
   <a href="#" class="task-list__link">Philosophie der Geschichte</a>
 </nav>
 <main class="main">
-  <h1 class="main__header">Welcome!</h1>
-  <span class="main__writing">Everything is as minimalistic as I could manage</span>
+  <div class="expression">
+    <input id="js-one-d" class="expression__digit" type="number">
+    <span class="expression__sign">+</span>
+    <input id="js-two-d" class="expression__digit" type="number">
+    <input id="js-expr-eval" class="expression__eval-btn" type="button" value="=">
+    <output class="expression__output"></output>
+  </div>
 </main>
 </body>
 </html>
