@@ -5,8 +5,7 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
-  <title><%= htmlWebpackPlugin.options.title %></title>
+  <title>Bremen</title>
 </head>
 <body>
 <nav class="task-list">
@@ -20,8 +19,10 @@
   <a href="./eight.html" class="task-list__link">Philosophie der Geschichte</a>
 </nav>
 <main class="main">
-  <h1 class="main__header">Welcome!</h1>
-  <span class="main__writing">Everything is as minimalistic as I could manage</span>
+  <input id="js-btn-speak" type="button" value="Speak" class="main__btn">
+  <input id="js-btn-stop" type="button" value="Please Stop" class="main__btn">
+  <br>
+  <output id="js-output" class="main__output"></output>
 </main>
 </body>
 </html>

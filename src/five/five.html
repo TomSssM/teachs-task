@@ -5,8 +5,7 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
-  <title><%= htmlWebpackPlugin.options.title %></title>
+  <title>Exchange Rate</title>
 </head>
 <body>
 <nav class="task-list">
@@ -20,8 +19,16 @@
   <a href="./eight.html" class="task-list__link">Philosophie der Geschichte</a>
 </nav>
 <main class="main">
-  <h1 class="main__header">Welcome!</h1>
-  <span class="main__writing">Everything is as minimalistic as I could manage</span>
+  <label for="js-usd-input">USD:</label>
+  <input type="text" id="js-usd-input">
+  <br>
+  <input id="js-calc-btn" type="button" value="Посчитать">
+  <output id="js-output"></output>
+  <br>
+  <span class="main__ads">
+    Для решения задания я брал API <a target="_blank" href="https://fixer.io/" class="main__link">здесь</a>, если у Вас не
+    получилось посчитать rate напишите мне, я обновлю ключ
+  </span>
 </main>
 </body>
 </html>

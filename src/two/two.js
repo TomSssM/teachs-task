@@ -1,4 +1,5 @@
 import './two.scss';
+import '../main-page/menu.scss';
 
 const btn = document.querySelector('#js-btn');
 const input = document.querySelector('#js-input');

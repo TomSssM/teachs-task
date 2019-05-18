@@ -5,8 +5,7 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
-  <title><%= htmlWebpackPlugin.options.title %></title>
+  <title>Information</title>
 </head>
 <body>
 <nav class="task-list">
@@ -20,8 +19,17 @@
   <a href="./eight.html" class="task-list__link">Philosophie der Geschichte</a>
 </nav>
 <main class="main">
-  <h1 class="main__header">Welcome!</h1>
-  <span class="main__writing">Everything is as minimalistic as I could manage</span>
+  <span class="main__writing">Количество информации в сообщении длиной h</span>
+  <br>
+  <img class="main__image" src="./equat.jpg" alt="equation">
+  <br>
+  <label for="l">Введите l</label>
+  <input type="number" id="l">
+  <br>
+  <label for="h">Введите h</label>
+  <input type="number" id="h">
+  <input id="js-calc-btn" type="button" value="Посчитать">
+  <output id="js-output"></output>
 </main>
 </body>
 </html>
