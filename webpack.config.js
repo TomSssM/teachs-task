@@ -5,6 +5,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
     entry: {
         main: path.resolve(__dirname, './src/main-page/main.js'),
+        one: path.resolve(__dirname, './src/one/one.js'),
     },
     output: {
         filename: '[name].bundle.js',
@@ -34,10 +35,17 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: "./src/main-page/main.html",
-            title: "My Awesome App",
+            title: "Welcome Page",
             filename: "index.html",
-            chunks: ["main"],
+            chunks: ['main'],
             hash: true,
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/one/one.html",
+            title: "2+2",
+            filename: "one.html",
+            hash: true,
+            chunks: ['one'],
         }),
         new CleanWebpackPlugin(),
     ],

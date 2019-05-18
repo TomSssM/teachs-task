@@ -8,3 +8,27 @@
     font-style: italic;
   }
 }
+
+.task-list {
+  list-style: none;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+
+  &__box {
+    font-size: 1rem;
+    display: inline-block;
+    background: #434343;
+
+    &:hover {
+      background: #767676;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #d8d8d8;
+    display: block;
+    padding: .3rem;
+  }
+}
