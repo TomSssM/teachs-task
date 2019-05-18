@@ -6,6 +6,7 @@ module.exports = {
     entry: {
         main: path.resolve(__dirname, './src/main-page/main.js'),
         one: path.resolve(__dirname, './src/one/one.js'),
+        two: path.resolve(__dirname, './src/two/two.js'),
     },
     output: {
         filename: '[name].bundle.js',
@@ -46,6 +47,13 @@ module.exports = {
             filename: "one.html",
             hash: true,
             chunks: ['one'],
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/two/two.html",
+            title: "Log",
+            filename: "two.html",
+            hash: true,
+            chunks: ['two'],
         }),
         new CleanWebpackPlugin(),
     ],
