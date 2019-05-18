@@ -7,5 +7,10 @@ const output = document.querySelector('#js-output');
 
 btn.addEventListener('click', () => {
     const number = Number(input.value);
-    output.innerHTML = Math.log(number) / Math.log(2);
+    const outputValue = Math.log(number) / Math.log(2);
+    if (isNaN(outputValue)) {
+        output.innerHTML = 'Error';
+        return;
+    }
+    output.innerHTML = outputValue;
 });

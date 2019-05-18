@@ -9,5 +9,10 @@ const output = document.querySelector('#js-output');
 btn.addEventListener('click', () => {
     const lVal = Number(l.value);
     const hVal = Number(h.value);
-    output.textContent = lVal * Math.log(hVal);
+    const outputValue = lVal * Math.log(hVal);
+    if (isNaN(outputValue)) {
+        output.innerHTML = 'Error';
+        return;
+    }
+    output.textContent = outputValue;
 });

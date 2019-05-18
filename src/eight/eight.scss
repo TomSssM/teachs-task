@@ -1,0 +1,11 @@
+.main {
+  &__saying {
+    color: #9a9a9a;
+    font-style: italic;
+    quotes: '\00AB' '\00BB';
+  }
+
+  &__output {
+    color: gray;
+  }
+}
