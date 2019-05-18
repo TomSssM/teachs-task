@@ -7,6 +7,7 @@ module.exports = {
         main: path.resolve(__dirname, './src/main-page/main.js'),
         one: path.resolve(__dirname, './src/one/one.js'),
         two: path.resolve(__dirname, './src/two/two.js'),
+        five: path.resolve(__dirname, './src/five/five.js'),
     },
     output: {
         filename: '[name].bundle.js',
@@ -30,6 +31,23 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: "babel-loader"
             },
+            {
+                test: /\.(png|jpe?g|gif|svg)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'img/',
+                        },
+
+                    },
+                ],
+            },
+            {
+                test: /\.html$/,
+                use: ['html-loader'],
+            }
         ]
     },
     devtool: "source-map",
@@ -45,15 +63,22 @@ module.exports = {
             template: "./src/one/one.html",
             title: "2+2",
             filename: "one.html",
-            hash: true,
             chunks: ['one'],
+            hash: true,
         }),
         new HtmlWebpackPlugin({
             template: "./src/two/two.html",
             title: "Log",
             filename: "two.html",
-            hash: true,
             chunks: ['two'],
+            hash: true,
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/five/five.html",
+            title: "Exchange Rate",
+            filename: "five.html",
+            // chunks: ['five'],
+            hash: true,
         }),
         new CleanWebpackPlugin(),
     ],
